@@ -1,5 +1,27 @@
 package br.edu.iff.bancodepalavras.dominio.letra.texto;
 
-public class LetraTextoFactory {
+import br.edu.iff.bancodepalavras.dominio.letra.Letra;
+import br.edu.iff.bancodepalavras.dominio.letra.LetraFactoryImpl;
+
+//Singleton
+public class LetraTextoFactory extends LetraFactoryImpl {
+
+	private static LetraTextoFactory soleInstance = null;
+
+	public static LetraTextoFactory getSoleinstance() {
+		if (soleInstance == null) {
+			soleInstance = new LetraTextoFactory();
+		}
+		return soleInstance;
+	}
+
+	private LetraTextoFactory() {
+
+	}
+
+	@Override
+	protected Letra criarLetra(char codigo) {
+		return new LetraTexto(codigo);
+	}
 
 }

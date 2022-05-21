@@ -1,5 +1,22 @@
 package br.edu.iff.factory;
 
-public class EntityFactory {
+import br.edu.iff.repository.Repository;
 
+//Abstract
+public abstract class EntityFactory {
+	  
+	  private Repository repository;
+
+	  protected EntityFactory(Repository repository) {
+	    this.repository = repository;
+	  }
+
+	  protected Repository getRepository() {
+	    return repository;
+	  }
+
+	  protected long getProximoId() {
+	    return repository.getProximoId();
+	  }
+	  
 }
