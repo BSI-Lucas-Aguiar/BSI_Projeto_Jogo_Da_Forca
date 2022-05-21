@@ -33,7 +33,7 @@ public class MemoriaJogadorRepository implements JogadorRepository {
 	@Override
 	public Jogador getPorId(Long id) {
 		for(Jogador jogadorTemp: pool) {
-			if(jogadorTemp.getId().equals(id)) {
+			if(jogadorTemp.getId() == id) {
 				return jogadorTemp;
 			}
 		}

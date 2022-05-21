@@ -34,7 +34,7 @@ public class MemoriaTemaRepository implements TemaRepository {
 	@Override
 	public Tema getPorId(Long id) {
 		for(Tema temaTemp: pool) {
-			if(temaTemp.getId().equals(id)) {
+			if(temaTemp.getId() == id) {
 				return temaTemp;
 			}
 		}

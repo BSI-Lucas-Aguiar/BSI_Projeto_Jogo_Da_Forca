@@ -20,7 +20,7 @@ public class Tema extends ObjetoDominioImpl{
 	}
 
 	
-	public Tema criar(long id, String nome) {
+	public static Tema criar(long id, String nome) {
 		Tema tema = new Tema(id, nome);
 		return tema;
 	}

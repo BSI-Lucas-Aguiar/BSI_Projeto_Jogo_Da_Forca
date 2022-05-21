@@ -23,7 +23,7 @@ public class MemoriaPalavraRepository implements PalavraRepository {
 	private List<Palavra> pool;
 
 	private MemoriaPalavraRepository() {
-		pool = new ArrayList<>();
+		pool = new ArrayList<Palavra>();
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class MemoriaPalavraRepository implements PalavraRepository {
 	@Override
 	public Palavra getPorId(long id) {
 		for(Palavra palavraTemp: pool) {
-			if(palavraTemp.getId().equals(id)) {
+			if(palavraTemp.getId() == id) {
 				return palavraTemp;
 			}
 		}

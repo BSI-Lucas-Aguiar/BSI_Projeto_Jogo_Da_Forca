@@ -6,14 +6,16 @@ public class JogadorNaoEncontradoException extends Exception {
 	
 	private String jogador;
 	
-	//get
-	public String getJogador() {
-		return null;
-	}
-	
 	//construtor
 	public JogadorNaoEncontradoException(String jogador) {
 		super(jogador);
 	}
+	
+
+	//get
+	public String getJogador() {
+		return this.jogador;
+	}
+	
 
 }

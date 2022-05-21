@@ -29,7 +29,7 @@ public class MemoriaRodadaRepository implements RodadaRepository {
 	@Override
 	public Rodada getPorId(Long id) {
 		for(Rodada rodadaTemp: pool) {
-			if(rodadaTemp.getId().equals(id)) {
+			if(rodadaTemp.getId() == id) {
 				return rodadaTemp;
 			}
 		}

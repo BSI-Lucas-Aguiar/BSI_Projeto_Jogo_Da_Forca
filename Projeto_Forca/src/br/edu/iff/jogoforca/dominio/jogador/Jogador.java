@@ -1,4 +1,4 @@
-papackage br.edu.iff.jogoforca.dominio.jogador;
+package br.edu.iff.jogoforca.dominio.jogador;
 
 import br.edu.iff.dominio.ObjetoDominioImpl;
 

@@ -26,7 +26,7 @@ public class Palavra extends ObjetoDominioImpl {
 
 		}
 		this.tema = tema;
-		this.palavras = new ArrayList<>();
+		this.palavras = new ArrayList<Letra>();
 		for(int contador = 0; contador < palavra.length(); contador++ ) {
 			this.palavras.add(letraFactory.getLetra(palavra.charAt(contador)));
 		}
@@ -93,7 +93,7 @@ public class Palavra extends ObjetoDominioImpl {
 	}
 
 	public List<Integer> tentar(char codigo){
-		List<Integer> posicoesEncotradas = new ArrayList<>();
+		List<Integer> posicoesEncotradas = new ArrayList<Integer>();
 		for(int contador = 0; contador < palavras.size(); contador++) {
 			if(palavras.get(contador).getCodigo() == codigo) {
 				posicoesEncotradas.add(contador);
