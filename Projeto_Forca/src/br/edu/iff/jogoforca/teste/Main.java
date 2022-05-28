@@ -27,24 +27,24 @@ public class Main {
 		
 		//Temas e cadastros
 		Tema temaAnimais = temaFactory.getTema("Animais");
-		PalavraFactory palavraNomesFactory = aplicacao.getPalavraFactory();
+		PalavraFactory palavraAnimaisFactory = aplicacao.getPalavraFactory();
 
-		palavraNomesFactory.getPalavra("Leao", temaAnimais);
-		palavraNomesFactory.getPalavra("Tigre", temaAnimais);
-		palavraNomesFactory.getPalavra("Zebra", temaAnimais);
-		palavraNomesFactory.getPalavra("Gato", temaAnimais);
-		palavraNomesFactory.getPalavra("Dromedario", temaAnimais);
-		palavraNomesFactory.getPalavra("Jabuti", temaAnimais);
+		palavraAnimaisFactory.getPalavra("Leao", temaAnimais);
+		palavraAnimaisFactory.getPalavra("Tigre", temaAnimais);
+		palavraAnimaisFactory.getPalavra("Zebra", temaAnimais);
+		palavraAnimaisFactory.getPalavra("Gato", temaAnimais);
+		palavraAnimaisFactory.getPalavra("Dromedario", temaAnimais);
+		palavraAnimaisFactory.getPalavra("Jabuti", temaAnimais);
 		
 		Tema temaCarros = temaFactory.getTema("Marcas de Carro");
-		PalavraFactory palavraPaisCidadeFactory = aplicacao.getPalavraFactory();
+		PalavraFactory palavraCarrosFactory = aplicacao.getPalavraFactory();
 		
-		palavraPaisCidadeFactory.getPalavra("Wolksvagen", temaCarros);
-		palavraPaisCidadeFactory.getPalavra("Fiat", temaCarros);
-		palavraPaisCidadeFactory.getPalavra("Chevrolet", temaCarros);
-		palavraPaisCidadeFactory.getPalavra("Hyundai", temaCarros);
-		palavraPaisCidadeFactory.getPalavra("Chery", temaCarros);
-		palavraPaisCidadeFactory.getPalavra("Mercedes-Benz", temaCarros);
+		palavraCarrosFactory.getPalavra("Wolksvagen", temaCarros);
+		palavraCarrosFactory.getPalavra("Fiat", temaCarros);
+		palavraCarrosFactory.getPalavra("Chevrolet", temaCarros);
+		palavraCarrosFactory.getPalavra("Hyundai", temaCarros);
+		palavraCarrosFactory.getPalavra("Chery", temaCarros);
+		palavraCarrosFactory.getPalavra("Mercedes-Benz", temaCarros);
 		
 		//Menu do Jogo
 		Scanner input = new Scanner(System.in);
