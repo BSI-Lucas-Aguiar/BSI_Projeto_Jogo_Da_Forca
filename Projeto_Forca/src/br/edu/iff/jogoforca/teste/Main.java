@@ -14,51 +14,50 @@ import br.edu.iff.jogoforca.dominio.jogador.JogadorFactory;
 import br.edu.iff.jogoforca.dominio.rodada.Rodada;
 import br.edu.iff.jogoforca.dominio.rodada.RodadaAppService;
 import br.edu.iff.jogoforca.dominio.rodada.RodadaFactory;
+import br.edu.iff.repository.RepositoryException;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws RepositoryException {
+		Scanner input = new Scanner(System.in); 
 		Aplicacao aplicacao = Aplicacao.getSoleInstance();
-		RodadaAppService rodadaapp = RodadaAppService.getSoleInstance();
+		RodadaAppService rodadaAppService = RodadaAppService.getSoleInstance();
+		int opcao;
 		
 		JogadorFactory jogadorFactory = aplicacao.getJogadorFactory();
 		TemaFactory temaFactory = aplicacao.getTemaFactory();
 		RodadaFactory rodadaFactory = aplicacao.getRodadaFactory();
 		
-		//Temas e cadastros
-		Tema temaAnimais = temaFactory.getTema("Animais");
-		PalavraFactory palavraAnimaisFactory = aplicacao.getPalavraFactory();
-
-		palavraAnimaisFactory.getPalavra("Leao", temaAnimais);
-		palavraAnimaisFactory.getPalavra("Tigre", temaAnimais);
-		palavraAnimaisFactory.getPalavra("Zebra", temaAnimais);
-		palavraAnimaisFactory.getPalavra("Gato", temaAnimais);
-		palavraAnimaisFactory.getPalavra("Dromedario", temaAnimais);
-		palavraAnimaisFactory.getPalavra("Jabuti", temaAnimais);
+		//cadastro de tema
+		Tema temaNomes = temaFactory.getTema("Nome de Pessoas");
+		PalavraFactory palavraNomesFactory = aplicacao.getPalavraFactory();
+		palavraNomesFactory.getPalavra("viniciuss", temaNomes);
+		palavraNomesFactory.getPalavra("gerson", temaNomes);
+		palavraNomesFactory.getPalavra("brendo", temaNomes);
+		palavraNomesFactory.getPalavra("lucas", temaNomes);
 		
 		Tema temaCarros = temaFactory.getTema("Marcas de Carro");
-		PalavraFactory palavraCarrosFactory = aplicacao.getPalavraFactory();
+		PalavraFactory palavraCarroFactory = aplicacao.getPalavraFactory();
+		palavraCarroFactory.getPalavra("brasil", temaCarros);
+		palavraCarroFactory.getPalavra("franca", temaCarros);
+		palavraCarroFactory.getPalavra("argentina", temaCarros);
+		palavraCarroFactory.getPalavra("salvador", temaCarros);
+		palavraCarroFactory.getPalavra("paris", temaCarros);
+		palavraCarroFactory.getPalavra("buenosaires", temaCarros);
 		
-		palavraCarrosFactory.getPalavra("Wolksvagen", temaCarros);
-		palavraCarrosFactory.getPalavra("Fiat", temaCarros);
-		palavraCarrosFactory.getPalavra("Chevrolet", temaCarros);
-		palavraCarrosFactory.getPalavra("Hyundai", temaCarros);
-		palavraCarrosFactory.getPalavra("Chery", temaCarros);
-		palavraCarrosFactory.getPalavra("Mercedes-Benz", temaCarros);
-		
-		//Menu do Jogo
-		Scanner input = new Scanner(System.in);
-		int opcao;
+		//PalavraFactory palavraUsuarioFactory = aplicacao.getPalavraFactory();
 		
 		do {
-			System.out.println("MENU DO JOGO");
-			System.out.println("1 - jogar");
-			System.out.println("0 - sair");
-			System.out.println("digite uma opcao: ");
+			System.out.println("*-*JOGO DA FORCA v1.0*-*\n");
+			System.out.println("1 - Jogar");
+			System.out.println("2 - Consultar Palavras");
+			System.out.println("3 - Cadastrar Palavras");
+			System.out.println("0 - Sair");
+			System.out.println("Digite uma opcao: ");
 			opcao = input.nextInt();
 			switch (opcao) {
 			case 1:
-				System.out.println("Entre com o nome do jogador: ");
+				System.out.println("Entre com o nome do jogador atual: ");
 				String nomeJogador = input.next();
 				
 				Jogador jogador = jogadorFactory.getJogador(nomeJogador);
@@ -66,34 +65,37 @@ public class Main {
 				Rodada rodada = rodadaFactory.getRodada(jogador);
 				
 				jogar(rodada, jogador);
-							
+				//Salvamento de rodada, não implementado
+				//rodadaAppService.salvarRodada(rodada);
+				
 				break;
 
 			default:
-				System.out.println("Obrigado por jogar");
-				System.out.println("Grupo: Mateus, Amarildo e Lucas");
+				System.out.println("Jogo Encerrado!");
+				System.out.println("Grupo: Amarildo, Lucas, Mateus");
 				break;
 			}
 			
 		}while(opcao!= 0);
 		
 		input.close();
-		
+
 	}
-	
 	private static void jogar(Rodada rodada, Jogador jogador) {
+		
 		Scanner input = new Scanner(System.in);
 		
-		while(rodada.encerrou() != true ) {
-			System.out.println("Tema: " + rodada.getTema().getNome());
-			System.out.println("jogador: " + jogador.getNome());
+		String temaAtual = rodada.getTema().getNome();
+		String jogadorAtual = jogador.getNome();
+		
+		while(rodada.encerrou() == false) {
+			System.out.println("Tema: " + temaAtual + " || Jogador: " + jogadorAtual);
 			
 			System.out.println("Letras arriscadas: ");
 			for(Letra letraTentativa: rodada.getTentativas()) {
 				letraTentativa.exibir(null);
 				System.out.print(" ");
 			}
-			
 			System.out.println();
             
             System.out.println("Palavras:");
@@ -134,21 +136,22 @@ public class Main {
                 System.out.println("");
             }
             
-           
         }
 
         if (rodada.descobriu() == true) {
-            System.out.println("Parabens");
+            System.out.println("-----Parabens voce acertou!-----");
             rodada.exibirPalavras(null);
             
         } else {
-            System.out.println("Você nao conseguiu, a palavra era: ");
+            System.out.println("Resposta incorreta, a palavra era: ");
             rodada.exibirPalavras(null);
             rodada.exibirBoneco(null);
             
         }
 
         System.out.println("Seus pontos foram: " + rodada.calcularPontos());
-		}
-	}
+        
+        
+	}		
 	
+}
