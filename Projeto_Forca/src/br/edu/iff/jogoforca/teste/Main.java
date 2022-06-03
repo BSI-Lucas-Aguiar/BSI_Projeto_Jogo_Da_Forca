@@ -54,7 +54,6 @@ public class Main {
 		do {
 			System.out.println("*-*JOGO DA FORCA v1.0*-*\n");
 			System.out.println("1 - Jogar");
-			System.out.println("2 - Cadastrar Palavras");
 			System.out.println("0 - Sair");
 			System.out.println("Digite uma opcao: ");
 			opcao = input.nextInt();
@@ -70,16 +69,6 @@ public class Main {
 				jogar(rodada, jogador);
 				//Salvamento de rodada, não implementado
 				//rodadaAppService.salvarRodada(rodada);
-				
-				break;
-			case 2:
-				
-				System.out.println("Entre com o nome da Palavra a ser cadastrada: ");
-				String palavra = input.next();
-				System.out.println("Entre com o nome do Tema a ser cadastrada: ");
-				String tema = input.next();	
-				
-			
 				
 				break;
 			default:
