@@ -3,7 +3,7 @@ package br.edu.iff.jogoforca.dominio.boneco.texto;
 import br.edu.iff.jogoforca.dominio.boneco.Boneco;
 
 public class BonecoTexto implements Boneco {
-	
+	//Singleton - Se a instancia for nula, cria uma nova, do contrÃ¡rio retorna a que jÃ¡ existe
 	private static BonecoTexto  soleInstance = null;
 
 	public static BonecoTexto getSoleInstance() {
@@ -92,7 +92,7 @@ public class BonecoTexto implements Boneco {
 			System.out.println("|                       nariz");
 			System.out.println("|                        boca");
 			System.out.println("|                      tronco");
-			System.out.println("|               braço direito");
+			System.out.println("|               braco direito");
 					
 		}
 		
@@ -106,8 +106,8 @@ public class BonecoTexto implements Boneco {
 			System.out.println("|                       nariz");
 			System.out.println("|                        boca");
 			System.out.println("|                      tronco");
-			System.out.println("|               braço direito");
-			System.out.println("|               braço esquerdo");
+			System.out.println("|               braco direito");
+			System.out.println("|               braco esquerdo");
 		}
 		
 		if (partes == 9) {
@@ -120,8 +120,8 @@ public class BonecoTexto implements Boneco {
 			System.out.println("|                       nariz");
 			System.out.println("|                        boca");
 			System.out.println("|                      tronco");
-			System.out.println("|               braço direito");
-			System.out.println("|               braço esquerdo");
+			System.out.println("|               braco direito");
+			System.out.println("|               braco esquerdo");
 			System.out.println("|               perna direita");
 		}
 		
@@ -135,8 +135,8 @@ public class BonecoTexto implements Boneco {
 			System.out.println("|                       nariz");
 			System.out.println("|                        boca");
 			System.out.println("|                      tronco");
-			System.out.println("|               braço direito");
-			System.out.println("|               braço esquerdo");
+			System.out.println("|               braco direito");
+			System.out.println("|               braco esquerdo");
 			System.out.println("|               perna direita");
 			System.out.println("|               perna esquerda");
 		}

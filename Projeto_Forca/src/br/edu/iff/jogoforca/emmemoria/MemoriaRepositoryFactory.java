@@ -15,6 +15,7 @@ public class MemoriaRepositoryFactory implements RepositoryFactory {
 	private static MemoriaRepositoryFactory soleInstance = null;
 	
 	//get e set
+	//Singleton - Criando a instancia da primeira chamada da memoria repository
 	public static MemoriaRepositoryFactory getSoleInstance() {
 		if(soleInstance == null) {
 			soleInstance = new MemoriaRepositoryFactory();
@@ -27,7 +28,7 @@ public class MemoriaRepositoryFactory implements RepositoryFactory {
 	private MemoriaRepositoryFactory() {
 
 	}
-
+	//Singleton - Pegando a Instancia de Tema, Rodada, Jogador e Palavra
 	@Override
 	public PalavraRepository getPalavraRepository() {
 		return MemoriaPalavraRepository.getSoleInstance();
