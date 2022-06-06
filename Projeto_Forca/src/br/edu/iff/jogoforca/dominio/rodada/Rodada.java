@@ -17,8 +17,8 @@ import br.edu.iff.jogoforca.dominio.boneco.BonecoFactory;
 import br.edu.iff.jogoforca.dominio.jogador.Jogador;
 
 public class Rodada extends ObjetoDominioImpl {
-
-	private static int maxPalavras = 1;
+	//PEGA 3 PALAVRAS DO BANCO DE PALAVRAS
+	private static int maxPalavras = 3;
 
 	private static int maxErros = 10;
 
