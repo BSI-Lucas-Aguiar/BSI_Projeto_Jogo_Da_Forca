@@ -48,9 +48,7 @@ public class Main {
 		palavraCarrosFactory.getPalavra("chevrolet", temaCarros);
 		palavraCarrosFactory.getPalavra("hyundai", temaCarros);
 		//Fim Cadastro --
-		
-		
-		
+
 		do {
 			System.out.println("*-*JOGO DA FORCA v1.0*-*\n");
 			System.out.println("1 - Jogar");
@@ -147,7 +145,8 @@ public class Main {
 			System.out.println("Resposta incorreta, a palavra era: ");
 			rodada.exibirPalavras(null);
 			rodada.exibirBoneco(null);
-
+			System.out.println("");
+			System.out.println("Enforcado!!");
 		}
 
 		System.out.println("Seus pontos foram: " + rodada.calcularPontos());
