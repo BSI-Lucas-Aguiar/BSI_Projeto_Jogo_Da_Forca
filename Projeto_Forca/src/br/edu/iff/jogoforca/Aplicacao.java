@@ -15,6 +15,7 @@ import br.edu.iff.jogoforca.emmemoria.MemoriaRepositoryFactory;
 import br.edu.iff.jogoforca.imagem.ElementoGraficoImagemFactory;
 import br.edu.iff.jogoforca.texto.ElementoGraficoTextoFactory;
 
+//Parametrized Factory
 public class Aplicacao {
 	
 	private final static String[] TIPOS_RODADA_FACTORY = {"sorteio"};
