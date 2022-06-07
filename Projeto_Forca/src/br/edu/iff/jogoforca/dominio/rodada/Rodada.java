@@ -44,6 +44,7 @@ public class Rodada extends ObjetoDominioImpl {
 		return maxPalavras;
 	}
 
+	//Pode ser chamado no caso de uma futura implementação para escolher o máximo de palavras a serem apresentadas
 	public static void setMaxPalavras(int maxPalavrasTemp) {
 		maxPalavras = maxPalavrasTemp;
 	}
@@ -128,7 +129,7 @@ public class Rodada extends ObjetoDominioImpl {
 		}
 
 	}
-	//metodos
+	//Métodos
 	public static Rodada criar(Long id, List<Palavra> palavras, Jogador jogador){
 		Rodada rodada = new Rodada(id, palavras, jogador);
 		return rodada;
@@ -165,6 +166,7 @@ public class Rodada extends ObjetoDominioImpl {
 		return itens.size();
 	}
 
+	//Chamado dentro do jogo na Main a cada chute de 'letra'
 	public void tentar(char codigo) {
 		if(encerrou()) {
 			return;
@@ -189,6 +191,7 @@ public class Rodada extends ObjetoDominioImpl {
 
 	}
 
+	//Chamado na Main quando o jogador tentar adivinhar uma palavra
 	public void arriscar(List<String> palavras) {
 		if(encerrou()) {
 			return;
@@ -202,6 +205,7 @@ public class Rodada extends ObjetoDominioImpl {
 		}
 	}
 
+	//Exibe as palavras da rodada atual, enconbertas ou não, chama o método exibir para cada palavra
 	public void exibirItens(Object object) {
 		for(Item itemTemp: itens) {
 			itemTemp.exibir(object);
@@ -223,7 +227,7 @@ public class Rodada extends ObjetoDominioImpl {
 
 	}
 
-	public void exibirLetraserradas(Object object) {
+	public void exibirLetrasErradas(Object object) {
 
 	}
 

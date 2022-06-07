@@ -50,8 +50,8 @@ public class Main {
 		//Fim Cadastro --
 
 		do {
-			System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-\n");
-			System.out.println("*-*JOGO DA FORCA v1.0*-*\n");
+			System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-");
+			System.out.println("*-*JOGO DA FORCA v1.0*-*");
 			System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-\n");
 			System.out.println("1 - Jogar");
 			System.out.println("0 - Sair");
@@ -64,8 +64,17 @@ public class Main {
 				
 				Jogador jogador = jogadorFactory.getJogador(nomeJogador);
 				
+				//Define o máximo de palavras que pode ser apresentado em uma rodada
+				Rodada.setMaxPalavras(3);
+				
+				//Definição do máximo de erros possíveis em uma rodada
+				//Pode ser alterado, foi iniciado a fins de teste, porém permanece 10 pois o boneco deve ter 10 partes apenas.
+				//Rodada.setMaxErros(10);
+				
+				//Quando a rodada é instanciada ela prepara o jogo, quantas palavras serão exibidas, tema, etc
 				Rodada rodada = rodadaFactory.getRodada(jogador);
 				
+				//Início do jogo
 				jogar(rodada, jogador);
 				//Salvamento de rodada, não implementado
 				//rodadaAppService.salvarRodada(rodada);
@@ -74,9 +83,9 @@ public class Main {
 			default:
 				System.out.println("Ogrigado por jogar! Jogo Finalizado!");
 				System.out.println("Jogo criado por:");
-				System.out.println("Amarildo");
-				System.out.println("Lucas");
-				System.out.println("Mateus");
+				System.out.println("Amarildo Júnior");
+				System.out.println("Lucas de Figueiredo");
+				System.out.println("Mateus Freitas");
 				System.out.println("Para a Disciplina Laboratório Orientado a Objetos Ministrada por Mark Douglas");
 				break;
 			}
