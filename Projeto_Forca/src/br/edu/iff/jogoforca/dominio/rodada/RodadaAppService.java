@@ -33,6 +33,7 @@ public class RodadaAppService {
 		
 	}
 	
+	//Singleton
 	public static RodadaAppService getSoleInstance() {
 		if(soleInstance == null) {
 			soleInstance = new RodadaAppService(null, null, null);

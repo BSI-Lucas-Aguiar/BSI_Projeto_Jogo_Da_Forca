@@ -77,6 +77,7 @@ public class Main {
 				System.out.println("Amarildo");
 				System.out.println("Lucas");
 				System.out.println("Mateus");
+				System.out.println("Para a Disciplina Laboratório Orientado a Objetos Ministrada por Mark Douglas");
 				break;
 			}
 			
