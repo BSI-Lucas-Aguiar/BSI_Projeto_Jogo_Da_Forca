@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import br.edu.iff.bancodepalavras.dominio.letra.Letra;
 import br.edu.iff.bancodepalavras.dominio.palavra.PalavraFactory;
-import br.edu.iff.bancodepalavras.dominio.palavra.PalavraFactoryImpl;
+//import br.edu.iff.bancodepalavras.dominio.palavra.PalavraFactoryImpl;
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
 import br.edu.iff.bancodepalavras.dominio.tema.TemaFactory;
 import br.edu.iff.jogoforca.Aplicacao;
@@ -50,7 +50,9 @@ public class Main {
 		//Fim Cadastro --
 
 		do {
+			System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-\n");
 			System.out.println("*-*JOGO DA FORCA v1.0*-*\n");
+			System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-\n");
 			System.out.println("1 - Jogar");
 			System.out.println("0 - Sair");
 			System.out.println("Digite uma opcao: ");
@@ -70,8 +72,11 @@ public class Main {
 				
 				break;
 			default:
-				System.out.println("Jogo Encerrado!");
-				System.out.println("Grupo: Amarildo, Lucas, Mateus");
+				System.out.println("Ogrigado por jogar! Jogo Finalizado!");
+				System.out.println("Jogo criado por:");
+				System.out.println("Amarildo");
+				System.out.println("Lucas");
+				System.out.println("Mateus");
 				break;
 			}
 			
@@ -126,7 +131,7 @@ public class Main {
             	List<String> palavras = new ArrayList<>();
 
             	for (int i = 1; i <= rodada.getNumPalavras(); i++) {
-            		System.out.println("Qual a palavra? ");
+            		System.out.println("Qual a palavra "+i+"? ");
             		String palavra = input.next();
             		palavras.add(palavra);
             	}
@@ -138,18 +143,20 @@ public class Main {
 		}
 
 		if (rodada.descobriu() == true) {
-			System.out.println("-----Parabens voce acertou!-----");
+			System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+			System.out.println("-*-*-*-*-PARABENS VOCE CONSEGUIU-*-*-*-*-");
+			System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
 			rodada.exibirPalavras(null);
 
 		} else {
-			System.out.println("Resposta incorreta, a palavra era: ");
+			System.out.println("Resposta(s) incorreta(s), a(s) palavra(s) era(m): ");
 			rodada.exibirPalavras(null);
 			rodada.exibirBoneco(null);
 			System.out.println("");
-			System.out.println("Enforcado!!");
+			System.out.println("Enforcado, tente novamente!");
 		}
 
-		System.out.println("Seus pontos foram: " + rodada.calcularPontos());
+		System.out.println("Sua pontuação foi: " + rodada.calcularPontos() + " pontos!");
 
 
 	}		

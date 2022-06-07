@@ -6,6 +6,8 @@ import br.edu.iff.bancodepalavras.dominio.tema.Tema;
 import br.edu.iff.bancodepalavras.dominio.tema.TemaRepository;
 import br.edu.iff.repository.RepositoryException;
 
+//Não foi feita implementação pois foi feita utilizando banco de dados em memória
+//No entando possui algumas métodos, que não são utilizados
 public class BDRTemaRepository implements TemaRepository {
 	
 	private static BDRTemaRepository soleInstance = null;

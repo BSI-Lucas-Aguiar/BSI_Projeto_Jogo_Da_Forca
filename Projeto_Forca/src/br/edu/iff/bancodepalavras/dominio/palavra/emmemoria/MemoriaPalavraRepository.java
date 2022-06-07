@@ -9,10 +9,12 @@ import br.edu.iff.bancodepalavras.dominio.palavra.PalavraRepository;
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
 import br.edu.iff.repository.RepositoryException;
 
+//Implementação do banco de dados em memória para a Palavra, utilizado na execução da aplicação
 public class MemoriaPalavraRepository implements PalavraRepository {
 
 	private static MemoriaPalavraRepository soleInstance = null;
 
+	//Singleton
 	public static MemoriaPalavraRepository getSoleInstance() {
 		if(soleInstance == null) {
 			soleInstance = new MemoriaPalavraRepository();

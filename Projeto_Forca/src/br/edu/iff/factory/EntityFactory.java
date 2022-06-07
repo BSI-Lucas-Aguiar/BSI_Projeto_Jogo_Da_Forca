@@ -2,6 +2,7 @@ package br.edu.iff.factory;
 
 import br.edu.iff.repository.Repository;
 
+//Entity
 //Abstract
 public abstract class EntityFactory {
 	  

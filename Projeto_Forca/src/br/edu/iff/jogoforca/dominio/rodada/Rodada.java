@@ -16,6 +16,7 @@ import br.edu.iff.jogoforca.dominio.boneco.Boneco;
 import br.edu.iff.jogoforca.dominio.boneco.BonecoFactory;
 import br.edu.iff.jogoforca.dominio.jogador.Jogador;
 
+//Entity
 public class Rodada extends ObjetoDominioImpl {
 	//PEGA 3 PALAVRAS DO BANCO DE PALAVRAS
 	private static int maxPalavras = 3;
@@ -79,7 +80,7 @@ public class Rodada extends ObjetoDominioImpl {
 		Rodada.bonecoFactory = bonecoFactory;
 	}
 
-	// construtor
+	//Construtor
 	private Rodada (Long id, List<Item> itens, List<Letra> erradas, Jogador jogador) {
 		super(id);
 		if(getBonecoFactory() == null) {
@@ -106,8 +107,6 @@ public class Rodada extends ObjetoDominioImpl {
 			this.erradas.add(erradaTemp);
 		}
 	}
-
-
 
 	private Rodada(Long id, List<Palavra> palavras, Jogador jogador) {
 		super(id);

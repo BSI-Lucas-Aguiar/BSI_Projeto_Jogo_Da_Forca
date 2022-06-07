@@ -7,11 +7,13 @@ public abstract class LetraFactoryImpl {
 
 	private Letra encoberta;
 
+	//Construtor
 	protected LetraFactoryImpl() {
 		this.pool = new Letra[26];
 		this.encoberta = null;
 	}
 
+	//Faz o retorno da letra quando já descoberta
 	public final Letra getLetra(char codigo) {
 		int i = codigo - 'a';
 		Letra result = this.pool[i];
@@ -24,6 +26,7 @@ public abstract class LetraFactoryImpl {
 
 	protected abstract Letra criarLetra(char codigo);
 
+	//Faz o retorno da letra quando ainda não descoberta
 	public final Letra getLetraEncoberta() {
 		if(encoberta == null) {
 			char codigo = '*';

@@ -5,6 +5,9 @@ import br.edu.iff.bancodepalavras.dominio.tema.TemaRepository;
 import br.edu.iff.jogoforca.dominio.jogador.JogadorRepository;
 import br.edu.iff.jogoforca.dominio.rodada.RodadaRepository;
 
+//Interface
+//Factory
+//Busca os demais repositories da aplicação
 public interface RepositoryFactory {
 
 	public PalavraRepository getPalavraRepository();

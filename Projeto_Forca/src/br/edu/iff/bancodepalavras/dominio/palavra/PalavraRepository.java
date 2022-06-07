@@ -6,6 +6,8 @@ import br.edu.iff.bancodepalavras.dominio.tema.Tema;
 import br.edu.iff.repository.Repository;
 import br.edu.iff.repository.RepositoryException;
 
+//Interface
+//Repository
 public interface PalavraRepository extends Repository {
 	
 	 public Palavra getPorId(long id);

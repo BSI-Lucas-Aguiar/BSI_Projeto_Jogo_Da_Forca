@@ -7,7 +7,7 @@ import br.edu.iff.jogoforca.dominio.jogador.Jogador;
 import br.edu.iff.jogoforca.dominio.jogador.JogadorRepository;
 import br.edu.iff.repository.RepositoryException;
 
-
+//Singleton
 public class MemoriaJogadorRepository implements JogadorRepository {
 
 	private static MemoriaJogadorRepository soleInstance = null;

@@ -6,6 +6,8 @@ import br.edu.iff.jogoforca.dominio.jogador.Jogador;
 import br.edu.iff.jogoforca.dominio.jogador.JogadorRepository;
 import br.edu.iff.repository.RepositoryException;
 
+//Facade
+//Singleton Parametrizado
 public class RodadaAppService {
 	
 	private static RodadaAppService soleInstance = null;

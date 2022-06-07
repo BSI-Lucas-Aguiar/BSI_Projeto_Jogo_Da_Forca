@@ -9,6 +9,7 @@ import br.edu.iff.bancodepalavras.dominio.letra.LetraFactory;
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
 import br.edu.iff.dominio.ObjetoDominioImpl;
 
+//Entity
 public class Palavra extends ObjetoDominioImpl {
 
 	private static LetraFactory letraFactory;
@@ -118,7 +119,7 @@ public class Palavra extends ObjetoDominioImpl {
 
 	@Override
 	public String toString() {
-		return "Palavra [palavras=" + palavras + ", tema=" + tema + "]";
+		return "Palavra [Palavras= " + palavras + ", Tema= " + tema + "]";
 	}
 
 }

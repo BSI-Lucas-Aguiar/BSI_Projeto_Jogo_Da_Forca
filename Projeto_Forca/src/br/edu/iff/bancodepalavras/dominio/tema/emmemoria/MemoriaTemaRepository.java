@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import br.edu.iff.bancodepalavras.dominio.palavra.PalavraRepository;
+//import br.edu.iff.bancodepalavras.dominio.palavra.PalavraRepository;
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
 import br.edu.iff.bancodepalavras.dominio.tema.TemaRepository;
-import br.edu.iff.jogoforca.RepositoryFactory;
+//import br.edu.iff.jogoforca.RepositoryFactory;
 import br.edu.iff.repository.RepositoryException;
 
 public class MemoriaTemaRepository implements TemaRepository {

@@ -6,6 +6,7 @@ import br.edu.iff.jogoforca.RepositoryFactory;
 import br.edu.iff.jogoforca.dominio.jogador.JogadorRepository;
 import br.edu.iff.jogoforca.dominio.rodada.RodadaRepository;
 
+//Singleton
 public class BDRRepositoryFactory implements RepositoryFactory  {
 	
 	private static BDRRepositoryFactory soleInstance = null;

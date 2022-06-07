@@ -8,6 +8,7 @@ import br.edu.iff.jogoforca.dominio.rodada.Rodada;
 import br.edu.iff.jogoforca.dominio.rodada.RodadaRepository;
 import br.edu.iff.repository.RepositoryException;
 
+//Singleton
 public class MemoriaRodadaRepository implements RodadaRepository {
 
 	private static MemoriaRodadaRepository soleInstance = null;

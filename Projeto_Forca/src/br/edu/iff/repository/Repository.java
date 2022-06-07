@@ -1,9 +1,6 @@
 package br.edu.iff.repository;
 
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.GenerationType;
-//import javax.persistence.Id;
-
+//Interface
 public interface Repository {
 
 	public long getProximoId();

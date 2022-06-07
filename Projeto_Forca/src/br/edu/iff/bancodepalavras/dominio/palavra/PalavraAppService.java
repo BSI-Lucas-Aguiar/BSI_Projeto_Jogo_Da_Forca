@@ -5,6 +5,8 @@ import br.edu.iff.bancodepalavras.dominio.tema.TemaFactory;
 import br.edu.iff.jogoforca.Aplicacao;
 import br.edu.iff.repository.RepositoryException;
 
+//Facade
+//Singleton Parametrizado
 public class PalavraAppService {
 
 	private static PalavraAppService soleInstance;
@@ -13,7 +15,7 @@ public class PalavraAppService {
 
 	private PalavraFactory palavraFactory;
 
-	//get
+	//Get
 	public static PalavraAppService getSoleInstance() {
 		if(soleInstance == null) {
 			soleInstance = new PalavraAppService(null, null);
@@ -21,12 +23,12 @@ public class PalavraAppService {
 
 		return soleInstance;
 	}
-	//construtor
+	//Construtor
 	private PalavraAppService(PalavraRepository palavraRepository, PalavraFactory palavraFactory) {
 		this.palavraRepository = palavraRepository;
 		this.palavraFactory = palavraFactory;
 	}
-	//metodos
+	//Metodos
 	private static void createSoleInstance(PalavraRepository palavraRepository, PalavraFactory palavraFactory) {
 		soleInstance = new PalavraAppService(palavraRepository, palavraFactory);
 

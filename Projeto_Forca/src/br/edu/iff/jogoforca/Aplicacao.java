@@ -127,7 +127,7 @@ public class Aplicacao {
 			elementoGraficoFactory = ElementoGraficoImagemFactory.getSoleInstance();
 			
 		}
-		//seta os facotres e elementos
+		//seta os factories e elementos
 		TemaFactoryImpl.createSoleInstance(repositoryFactory.getTemaRepository());
 		PalavraFactoryImpl.createSoleInstance(repositoryFactory.getPalavraRepository());
 		JogadorFactoryImpl.createSoleInstance(repositoryFactory.getJogadorRepository());

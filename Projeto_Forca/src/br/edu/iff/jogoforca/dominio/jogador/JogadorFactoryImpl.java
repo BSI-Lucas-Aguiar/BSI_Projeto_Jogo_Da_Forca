@@ -3,10 +3,12 @@ package br.edu.iff.jogoforca.dominio.jogador;
 import br.edu.iff.factory.EntityFactory;
 import br.edu.iff.repository.RepositoryException;
 
+//Singleton Parametrizado
 public class JogadorFactoryImpl extends EntityFactory implements JogadorFactory {
 
 	private static JogadorFactoryImpl soleInstance = null;
 
+	//Singleton
 	public static void createSoleInstance(JogadorRepository jogadorRepository) {
 		soleInstance = new JogadorFactoryImpl(jogadorRepository);
 	}

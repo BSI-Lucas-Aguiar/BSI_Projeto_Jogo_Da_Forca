@@ -5,11 +5,12 @@ import br.edu.iff.factory.EntityFactory;
 import br.edu.iff.repository.Repository;
 import br.edu.iff.repository.RepositoryException;
 
+//Singleton Parametrizado
 public class PalavraFactoryImpl extends EntityFactory implements PalavraFactory{
 
 	private static PalavraFactoryImpl soleInstance = null;
 	
-	//get e set
+	//Get e Set
 	public static PalavraFactoryImpl getSoleInstance() {
 		if(soleInstance == null) {
 			throw new RuntimeException("criação de palavras nao iniciada");
@@ -18,12 +19,13 @@ public class PalavraFactoryImpl extends EntityFactory implements PalavraFactory{
 		return soleInstance;
 	}
 	
-	//construtor
+	//Construtor
 	private PalavraFactoryImpl(Repository repository) {
 		super(repository);
 		// TODO Auto-generated constructor stub
 	}
-	//metodos
+	
+	//Metodo Singleton Parametrizado
 	public static void createSoleInstance(PalavraRepository palavraRepository) {
 		soleInstance = new PalavraFactoryImpl(palavraRepository);
 	}

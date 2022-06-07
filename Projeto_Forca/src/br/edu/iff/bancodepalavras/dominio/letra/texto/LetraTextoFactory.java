@@ -8,6 +8,7 @@ public class LetraTextoFactory extends LetraFactoryImpl {
 
 	private static LetraTextoFactory soleInstance = null;
 
+	//Implementação do Singleton
 	public static LetraTextoFactory getSoleinstance() {
 		if (soleInstance == null) {
 			soleInstance = new LetraTextoFactory();

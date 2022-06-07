@@ -23,6 +23,7 @@ public abstract class Letra {
 		return "Letra" + codigo ;
 	}
 
+	//Implementação do Flyweight
 	@Override
 	public boolean equals(Object o) {
 		if (!(o instanceof Letra)) {

@@ -7,9 +7,8 @@ import br.edu.iff.bancodepalavras.dominio.letra.Letra;
 import br.edu.iff.bancodepalavras.dominio.palavra.Palavra;
 import br.edu.iff.dominio.ObjetoDominioImpl;
 
+//Entity
 public class Item extends ObjetoDominioImpl {
-
-
 
 	private List<Boolean> posicoesDescobertas;
 
@@ -33,8 +32,12 @@ public class Item extends ObjetoDominioImpl {
 	public void setPalavraArriscada(String palavraArriscada) {
 		this.palavraArriscada = palavraArriscada;
 	}
+	
+	public Palavra getPalavra() {
+		return this.palavra;
+	}
 
-	// construtores
+	//Construtores
 	public static Item criar(int id, Palavra palavra) {
 		Item item = new Item(id, palavra);
 		return item;
@@ -65,11 +68,8 @@ public class Item extends ObjetoDominioImpl {
 			this.posicoesDescobertas.add(temp,true);
 		}
 	}
+	
 	//metodos
-	public Palavra getPalavra() {
-		return this.palavra;
-	}
-
 	public List<Letra> getLetraDescoberta() {
 		List<Letra> descobertas = new ArrayList<>();
 		for(int contador = 0; contador < posicoesDescobertas.size(); contador++) {

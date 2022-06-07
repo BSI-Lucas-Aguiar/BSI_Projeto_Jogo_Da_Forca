@@ -11,6 +11,8 @@ public class Tema extends ObjetoDominioImpl{
 		this.nome = nome;
 	}
 	
+	
+	//Get e Set
 	public String getNome() {
 		return nome;
 	}
@@ -19,7 +21,7 @@ public class Tema extends ObjetoDominioImpl{
 		this.nome = nome;
 	}
 
-	
+	//Metodos
 	public static Tema criar(long id, String nome) {
 		Tema tema = new Tema(id, nome);
 		return tema;

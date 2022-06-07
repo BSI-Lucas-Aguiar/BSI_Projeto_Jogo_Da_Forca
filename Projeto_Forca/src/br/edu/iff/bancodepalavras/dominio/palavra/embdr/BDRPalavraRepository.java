@@ -7,6 +7,8 @@ import br.edu.iff.bancodepalavras.dominio.palavra.PalavraRepository;
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
 import br.edu.iff.repository.RepositoryException;
 
+//Não foi feita implementação pois foi feita utilizando banco de dados em memória
+//No entando possui algumas métodos, que não são utilizados
 public class BDRPalavraRepository implements PalavraRepository {
 
 	private static BDRPalavraRepository soleInstance = null;
