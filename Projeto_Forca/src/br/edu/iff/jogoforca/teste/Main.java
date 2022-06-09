@@ -132,7 +132,7 @@ public class Main {
 
             	if (codigo >= 'A' && codigo <= 'Z') {
             		codigo = (char)(codigo+32);
-            	} 
+            	}
 
             	rodada.tentar(codigo); 
 
